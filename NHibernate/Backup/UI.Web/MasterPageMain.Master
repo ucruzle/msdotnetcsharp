@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="MasterPageMain.master.cs" 
+    Inherits="UI.Web.MasterPageMain" %>
+
+<!DOCTYPE html PUBLIC 
+ "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>NHibernate MVC Application</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmMasterPageMain" runat="server">
+        <asp:SiteMapDataSource ID="SiteMapDataSourceMasterPageMain" runat="server" />
+        <asp:Menu ID="MenuMasterPageMain" runat="server" 
+            DataSourceID="SiteMapDataSourceMasterPageMain" Orientation="Horizontal" 
+            StaticDisplayLevels="2">
+        </asp:Menu>
+        <div>
+            <asp:ContentPlaceHolder ID="cphMidleContent" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.Process.cntrlDepartamento">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAABAAAQAAAAAA=</HashCode>
+      <FileName>cntrlDepartamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Process.cntrlFuncionario">
+    <Position X="2.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAgAQAAAAAA=</HashCode>
+      <FileName>cntrlFuncionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Process.cntrlTarefa">
+    <Position X="5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAABAAAAAAAEAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>cntrlTarefa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
