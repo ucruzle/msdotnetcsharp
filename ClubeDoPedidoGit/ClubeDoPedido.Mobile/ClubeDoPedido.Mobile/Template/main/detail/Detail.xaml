@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ControlsView="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:Controls="clr-namespace:ClubeDoPedido.Mobile.Componentes"
+             x:Class="ClubeDoPedido.Mobile.Template.main.detail.Detail"
+             Title="Clube do Pedido">
+  
+  <ContentPage.ToolbarItems BackgroundColor="#e0e0e0">
+    <ToolbarItem Icon="entrar.png" Priority="0"
+                 Command="{Binding EntrarCommand}"/>
+    <ToolbarItem Text="Cadastrar"
+                 Priority="1"
+                 Order="Secondary"
+                 Command="{Binding CadastroCommand}"/>
+    <ToolbarItem Text="Esqueceu Senha?"
+                 Priority="2"
+                 Order="Secondary" />
+    <ToolbarItem Text="Sair"
+                 Priority="3"
+                 Order="Secondary" />
+  </ContentPage.ToolbarItems>
+
+  <StackLayout x:Name="StackPrincipal" 
+               BackgroundColor="#ff9800" 
+               Orientation="Vertical" 
+               Margin="0,1,0,0">
+    <!--Carrocel de Promoções-->
+    <ControlsView:CarouselView x:Name="CarouselBanners" 
+                               ItemsSource="{Binding Banners}"   
+                               HeightRequest="190">
+      <ControlsView:CarouselView.ItemTemplate>
+        <DataTemplate>
+          <StackLayout Orientation="Vertical">
+            <Grid RowSpacing="0">
+              <Grid.RowDefinitions>
+                <RowDefinition Height=".9*"/>
+                <RowDefinition Height=".5*"/>
+              </Grid.RowDefinitions>
+              <!--Banner Promoção-->
+              <Image Grid.RowSpan="2"
+                     Aspect="AspectFill"
+                     Source="{Binding ImageUrl}"/>
+              <StackLayout Grid.Row="1" 
+                           BackgroundColor="#99000000" 
+                           Padding="12,2,12,2">
+                <!--Nome Produto-->
+                <Label Text="{Binding NomeProduto}"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="18"
+                       VerticalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Vertical">
+                  <Grid RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <!--Nome Estabelecimento-->
+                    <Label Text="{Binding NomeEstabelecimento}"
+                           TextColor="#ff9800"
+                           FontAttributes="Italic"
+                           FontFamily="Roboto-Medium"
+                           FontSize="16"/>
+
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.Row="0"
+                                 Grid.Column="1">
+                      <!--Preço-->
+                      <Label Text="{Binding PecoVenda}"
+                             TextColor="#ff9800"
+                             FontAttributes="Bold"
+                             FontSize="16"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalTextAlignment="End"/>
+
+                    </StackLayout>
+                  </Grid>
+                </StackLayout>
+                
+              </StackLayout>
+            </Grid>
+          </StackLayout>
+        </DataTemplate>
+      </ControlsView:CarouselView.ItemTemplate>
+    </ControlsView:CarouselView>
+    <!--Lista de Estabelecimentos-->
+    <ScrollView>
+      <ListView x:Name="ListaEstabelecimentos"  
+                ItemsSource="{Binding Estabelecimentos}" 
+                SelectedItem="{Binding EstabelecimentoItem, Mode=TwoWay}"
+                RowHeight="80" 
+                SeparatorVisibility="None" 
+                CachingStrategy="RecycleElement"
+                BackgroundColor="#e0e0e0">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout>
+                <Grid Grid.ColumnSpacing="0" 
+                      Grid.RowSpacing="0">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                  </Grid.RowDefinitions>
+                  <StackLayout BackgroundColor="#ffffff" 
+                               Orientation="Vertical" 
+                               Grid.Row="0" 
+                               Grid.Column="0" 
+                               Padding="0,3,0,0" 
+                               Spacing="0">
+                    <!--Logo Empresa-->
+                    <Controls:CircleImage WidthRequest ="60"
+                                          HeightRequest="60"
+                                          Margin="2,8,2,8"
+                                          Aspect="AspectFit"
+                                          HorizontalOptions="LayoutOptions.Center"
+                                          VerticalOptions="LayoutOptions.Center"
+                                          Source="{Binding ImageUrl}" />
+
+                  </StackLayout>
+                  <StackLayout BackgroundColor="#ffffff"  
+                               Orientation="Vertical" 
+                               Grid.Row="0" 
+                               Grid.Column="1" 
+                               Padding="5,1,0,0" 
+                               Spacing="0">
+                      <Grid RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="*" />
+                          <ColumnDefinition Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                          <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <!--Nome Empresa-->
+                        <Label Text="{Binding NomeFantasia}"
+                               TextColor="#E53935"
+                               FontAttributes="Bold"
+                               FontSize="15"
+                               Grid.Row="0" 
+                               Grid.Column="0"/>
+                        
+                        <StackLayout Orientation="Horizontal"  
+                                     Grid.Row="0"  
+                                     Grid.Column="1">
+                            <!--Avaliação da Empresa-->
+                            <Image Source="star.png"/>
+                            <Label Text="{Binding Avaliacao}"
+                                   TextColor="#ff9800"
+                                   FontSize="16"/>
+                          
+                        </StackLayout>
+                      </Grid>
+
+                      <!--Ramo de Atividade-->
+                      <Label Text="{Binding RamoAtividade}"
+                             TextColor="Silver"
+                             FontAttributes="Bold"
+                             FontSize="13" />
+                   
+                  </StackLayout>
+                </Grid>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </ScrollView>
+  </StackLayout>
+</ContentPage>

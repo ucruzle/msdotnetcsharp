@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-) DataTier", "00-) DataTier", "{B66763B0-FE9C-4526-8476-4A4E7A04E313}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-) BusinessTier", "01-) BusinessTier", "{F0D296E2-EAC6-411E-9857-EE2815D94A9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-) ServiceTier", "02-) ServiceTier", "{C0CA244D-84E2-49FD-8A3B-DB901CDD5B53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSkyNet.ObjectRelationalMapping", "BrSkyNet.ObjectRelationalMapping\BrSkyNet.ObjectRelationalMapping.csproj", "{BA460AC0-25E1-4FF6-8A80-0AC3C25DBEE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSkyNet.ModelLayer", "BrSkyNet.ModelLayer\BrSkyNet.ModelLayer.csproj", "{1CA99FDD-B6DC-4AB8-8CC9-11314AA2B045}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSkyNet.DataAccessLayer", "BrSkyNet.DataAccessLayer\BrSkyNet.DataAccessLayer.csproj", "{0357CEB7-293A-4603-ACB4-B09700A705B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSkyNet.BusinessLogicLayer", "BrSkyNet.BusinessLogicLayer\BrSkyNet.BusinessLogicLayer.csproj", "{BBEFFAC5-CB37-4CF3-8CF4-817AD4213CE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSkyNet.InteropLayer", "BrSkyNet.InteropLayer\BrSkyNet.InteropLayer.csproj", "{C5A267F0-4D45-48EF-8D0F-07F7BB29A961}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://otimizeti.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BrSkyNet.ObjectRelationalMapping\\BrSkyNet.ObjectRelationalMapping.csproj
+		SccProjectTopLevelParentUniqueName1 = Manhattan.sln
+		SccProjectName1 = BrSkyNet.ObjectRelationalMapping
+		SccLocalPath1 = BrSkyNet.ObjectRelationalMapping
+		SccProjectUniqueName2 = BrSkyNet.ModelLayer\\BrSkyNet.ModelLayer.csproj
+		SccProjectTopLevelParentUniqueName2 = Manhattan.sln
+		SccProjectName2 = BrSkyNet.ModelLayer
+		SccLocalPath2 = BrSkyNet.ModelLayer
+		SccProjectUniqueName3 = BrSkyNet.DataAccessLayer\\BrSkyNet.DataAccessLayer.csproj
+		SccProjectTopLevelParentUniqueName3 = Manhattan.sln
+		SccProjectName3 = BrSkyNet.DataAccessLayer
+		SccLocalPath3 = BrSkyNet.DataAccessLayer
+		SccProjectUniqueName4 = BrSkyNet.BusinessLogicLayer\\BrSkyNet.BusinessLogicLayer.csproj
+		SccProjectTopLevelParentUniqueName4 = Manhattan.sln
+		SccProjectName4 = BrSkyNet.BusinessLogicLayer
+		SccLocalPath4 = BrSkyNet.BusinessLogicLayer
+		SccProjectUniqueName5 = BrSkyNet.InteropLayer\\BrSkyNet.InteropLayer.csproj
+		SccProjectTopLevelParentUniqueName5 = Manhattan.sln
+		SccProjectName5 = BrSkyNet.InteropLayer
+		SccLocalPath5 = BrSkyNet.InteropLayer
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA460AC0-25E1-4FF6-8A80-0AC3C25DBEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA460AC0-25E1-4FF6-8A80-0AC3C25DBEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA460AC0-25E1-4FF6-8A80-0AC3C25DBEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA460AC0-25E1-4FF6-8A80-0AC3C25DBEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA99FDD-B6DC-4AB8-8CC9-11314AA2B045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA99FDD-B6DC-4AB8-8CC9-11314AA2B045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA99FDD-B6DC-4AB8-8CC9-11314AA2B045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA99FDD-B6DC-4AB8-8CC9-11314AA2B045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0357CEB7-293A-4603-ACB4-B09700A705B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0357CEB7-293A-4603-ACB4-B09700A705B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0357CEB7-293A-4603-ACB4-B09700A705B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0357CEB7-293A-4603-ACB4-B09700A705B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEFFAC5-CB37-4CF3-8CF4-817AD4213CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEFFAC5-CB37-4CF3-8CF4-817AD4213CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEFFAC5-CB37-4CF3-8CF4-817AD4213CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEFFAC5-CB37-4CF3-8CF4-817AD4213CE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A267F0-4D45-48EF-8D0F-07F7BB29A961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A267F0-4D45-48EF-8D0F-07F7BB29A961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A267F0-4D45-48EF-8D0F-07F7BB29A961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A267F0-4D45-48EF-8D0F-07F7BB29A961}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA460AC0-25E1-4FF6-8A80-0AC3C25DBEE8} = {B66763B0-FE9C-4526-8476-4A4E7A04E313}
+		{1CA99FDD-B6DC-4AB8-8CC9-11314AA2B045} = {F0D296E2-EAC6-411E-9857-EE2815D94A9D}
+		{0357CEB7-293A-4603-ACB4-B09700A705B4} = {F0D296E2-EAC6-411E-9857-EE2815D94A9D}
+		{BBEFFAC5-CB37-4CF3-8CF4-817AD4213CE8} = {F0D296E2-EAC6-411E-9857-EE2815D94A9D}
+		{C5A267F0-4D45-48EF-8D0F-07F7BB29A961} = {C0CA244D-84E2-49FD-8A3B-DB901CDD5B53}
+	EndGlobalSection
+EndGlobal

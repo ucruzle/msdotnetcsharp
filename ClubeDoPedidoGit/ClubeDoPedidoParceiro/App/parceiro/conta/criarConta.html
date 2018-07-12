@@ -1,0 +1,172 @@
+﻿<div class="container-box-branco">
+    <div class="container-margens-laterais">
+        <style>
+            .row {
+                margin-bottom: 0px;
+            }
+        </style>
+
+        <br />
+        <!--BreadCrumb-->
+        <ul class="breadcrumbcss">
+            <li><a  href="ClubePedido.html#!/home">Home</a></li>
+            <li><a  href="ClubePedido.html#!/loginParceiro">Sou um parceiro</a></li>
+            <li><a>Conta Parceiro</a></li>
+        </ul>
+
+        <!--Título da Página-->
+        <!--<h3>{{pageTitle}}</h3>-->
+
+        <br /><br /><br /><br /><br />
+
+        <div class="col-sm-6">
+            <h4>Dados Cadastrais</h4>
+            <div class="form-group">
+                <!--Ramo de Atividade-->
+                <input id="notAvailable" name="notAvailable" type="hidden" value="false">
+                <select class="form-control" aria-required="true">
+                    <option disabled="disabled" selected="selected" value="">Ramo de Atividade</option>
+                    <option value="3">Restaurante, Lanchonete e Bares</option>
+                    <option value="2">Comércio, varejo e Lojas </option>
+                    <option value="1">Supermercado, Mercearia e Hortifrutes</option>
+                    <option value="4">Prestação de serviços</option>
+                    <option value="5">Outros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <!--Nome Fantazia-->
+                <input type="text" class="form-control" placeholder="Nome Fantazia da sua Empresa" ng-model="ParceiroDto.NomeFantasia" maxlength="50" />
+            </div>
+            <div class="form-group">
+                <!--CPF CNPJ-->
+                <input type="text" class="form-control" placeholder="CPF ou CNPJ (apenas números)" ng-model="ParceiroDto.CpfCnpj" />
+            </div>
+            <div class="form-group">
+                <!--E-mail-->
+                <input type="text" class="form-control" placeholder="E-mail" maxlength="150" ng-model="ParceiroDto.Email" />
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <!--Senha-->
+                        <input type="text" class="form-control" placeholder="Senha" maxlength="20" ng-model="ParceiroDto.Senha" />
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <!--Confirmar Senha-->
+                        <input type="text" class="form-control" placeholder="Confirmar Senha" maxlength="20" ng-model="ParceiroDto.ConfirmaSenha" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <!--Celular-->
+                        <input type="text" class="form-control" placeholder="Celular (apenas números)" maxlength="20" ng-model="ParceiroDto.Celular" />
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <!--Telefone-->
+                        <input type="text" class="form-control" placeholder="Telefone (apenas números)" maxlength="20" ng-model="ParceiroDto.Telefone" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-6 padding-left">
+            <h4>Endereço</h4>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <!--CEP-->
+                        <input type="text" class="form-control" placeholder="CEP (apenas números)" maxlength="9" ng-model="ParceiroDto.Endereco.Cep" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <select class="form-control required ajax" id="restaurantState" name="00NF000000CNCMF" aria-required="true">
+                            <option selected="selected" value="">Estado</option>
+                            <option value="AC">ACRE</option>
+                            <option value="AL">ALAGOAS</option>
+                            <option value="AM">AMAZONAS</option>
+                            <option value="AP">AMAPA</option>
+                            <option value="BA">BAHIA</option>
+                            <option value="CE">CEARA</option>
+                            <option value="DF">DISTRITO FEDERAL</option>
+                            <option value="ES">ESPIRITO SANTO</option>
+                            <option value="GO">GOIAS</option>
+                            <option value="MA">MARANHAO</option>
+                            <option value="MG">MINAS GERAIS</option>
+                            <option value="MS">MATO GROSSO DO SUL</option>
+                            <option value="MT">MATO GROSSO</option>
+                            <option value="PA">PARA</option>
+                            <option value="PB">PARAIBA</option>
+                            <option value="PE">PERNAMBUCO</option>
+                            <option value="PI">PIAUI</option>
+                            <option value="PR">PARANA</option>
+                            <option value="RJ">RIO DE JANEIRO</option>
+                            <option value="RN">RIO GRANDE DO NORTE</option>
+                            <option value="RO">RONDONIA</option>
+                            <option value="RR">RORAIMA</option>
+                            <option value="RS">RIO GRANDE DO SUL</option>
+                            <option value="SC">SANTA CATARINA</option>
+                            <option value="SP">SAO PAULO</option>
+                            <option value="SE">SERGIPE</option>
+                            <option value="TO">TOCANTINS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <!--Cidade-->
+                        <input type="text" class="form-control" placeholder="Cidade" maxlength="50" ng-model="ParceiroDto.Endereco.Cidade" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <!--Bairro-->
+                        <input type="text" class="form-control" placeholder="Bairro" maxlength="50" ng-model="ParceiroDto.Endereco.Bairro" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="form-group">
+                        <!--Logradouro-->
+                        <input type="text" class="form-control" placeholder="Rua" maxlength="100" ng-model="ParceiroDto.Endereco.Logradouro" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <!-- Número -->
+                        <input type="text" class="form-control" placeholder="Número" maxlength="6" ng-model="ParceiroDto.Endereco.Numero" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <!--Complemento-->
+                <input type="text" class="form-control" placeholder="Complemento" maxlength="150" ng-model="ParceiroDto.Endereco.Complemento" />
+            </div>
+            <div class="form-group">
+                <!--Ponto Referência-->
+                <input type="text" class="form-control" placeholder="Ponto Referência" maxlength="150" ng-model="ParceiroDto.Endereco.PontoReferencia" />
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <h2>Assinatura de Planos</h2>
+        </div>
+        
+
+        <div class="col-md-12 col-sm-12 center">
+            <button class="waves-effect waves-light btn yellow darken-3 nextBtn btn pull-right" type="button" ng-click="Confirmar()">Confirmar</button>
+        </div>
+    </div>
+</div>

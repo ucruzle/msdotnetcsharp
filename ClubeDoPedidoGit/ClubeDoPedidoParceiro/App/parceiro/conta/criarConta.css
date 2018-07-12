@@ -1,0 +1,120 @@
+﻿.btn, .btn-large, .btn-flat {
+     height: auto !important; 
+}
+
+.tabelaPreco{
+    text-align: center;
+    background: #e6e6e6;
+}
+.tabelaPreco:hover{
+    margin-top: 10px;
+}
+.tabelaPreco > .tabelaPreco-header{
+    color:#fff;
+}
+.tabelaPreco .tabelaPreco-header > .heading{
+    display: block;
+    padding: 10px 0;
+    background: #d32f2f;
+}
+.tabelaPreco .tabelaPreco-header > .heading > h3{
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.tabelaPreco .tabelaPreco-header > .heading > i{
+    font-size: 70px;
+    opacity: 0.5;
+}
+.tabelaPreco .tabelaPreco-header > .preco-valor{
+    display: block;
+    background: #4caf50;
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 27px;
+    font-weight: bold;
+}
+.tabelaPreco .tabelaPreco-header > .preco-valor> .month{
+    display: block;
+    font-size: 14px;
+}
+.tabelaPreco > .precoConteudo{
+    text-transform: capitalize;
+}
+.tabelaPreco > .precoConteudo > ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.tabelaPreco > .precoConteudo > ul > li{
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.tabelaPreco > .precoConteudo > ul > li:after{
+    content: "";
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:-100%;
+    background: #b6b6b6;
+    z-index: -5;
+    transition: all 0.4s ease 0s;
+}
+.tabelaPreco > .precoConteudo > ul > li:hover:after{
+    left:0;
+    transition: all 0.4s ease 0s;
+}
+.tabelaPreco .tabelaPreco-assinar{
+    padding: 20px 0;
+}
+.tabelaPreco .tabelaPreco-assinar > .btn-block{
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0px;
+    border: 1px solid #d50000;
+    color: #d50000;
+    background: #e6e6e6;
+    position: relative;
+    transition: all 0.6s ease 0s;
+}
+.tabelaPreco .tabelaPreco-assinar > .btn-block:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:0;
+    z-index: -1;
+    transition: all 0.6s ease 0s;
+}
+.tabelaPreco .tabelaPreco-assinar > .btn-block:after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 100%;
+    height:0;
+    z-index: -1;
+    transition: all 0.6s ease 0s;
+}
+.tabelaPreco .tabelaPreco-assinar > .btn-block:hover{
+    z-index: 1;
+    color:#fff;
+}
+.tabelaPreco .tabelaPreco-assinar > .btn-block:hover:before,
+.tabelaPreco .tabelaPreco-assinar > .btn-block:hover:after{
+    background: #d32f2f;
+    height:50%;
+}
+@media screen and (max-width: 990px){
+    .tabelaPreco{
+        margin-bottom: 20px;
+    }
+}

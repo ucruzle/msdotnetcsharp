@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:ClubeDoPedido.Mobile.Componentes"
+             x:Class="ClubeDoPedido.Mobile.Template.produto.catalogo.Catalogo"
+             Title="Catálogo">
+  
+  <ScrollView>
+    <StackLayout Orientation="Horizontal">
+      <Grid Padding="10" >
+        <Grid>
+          <!--Colunas Mestres-->
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+
+          <!--*
+          *
+          * Primeira coluna  do grid principal 
+          *
+          *-->
+
+          <ListView Grid.Column="0" SeparatorVisibility="None" ItemsSource="{Binding ItemsColumnLeft}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <ViewCell>
+                  <Grid>
+                    <!--Colunas do card-->
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame BackgroundColor="#ffffff" OutlineColor="#ffffff" Padding="0,5,0,5">
+                      <Frame Padding="1" BackgroundColor="#E53935" HasShadow="True" OutlineColor="#bbb">
+                        <Grid>
+                          <!--Linhas do card-->
+                          <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="*"/>
+                          </Grid.RowDefinitions>
+                          <Frame BackgroundColor="White" Padding="5" HasShadow="False">
+                            <!--Logo da empresa-->
+                            <Controls:CircleImage WidthRequest ="80"
+                                                  HeightRequest="80"
+                                                  Aspect="AspectFit"
+                                                  HorizontalOptions="LayoutOptions.Center"
+                                                  VerticalOptions="LayoutOptions.Center"
+                                                  Source="{Binding Imagem}" />
+                          </Frame>
+                          <StackLayout Grid.Row="1" Padding="5,0,5,5" Spacing="1">
+                            <!--Nome do Estabelecimento-->
+                            <Label Text="{Binding DescricaoReduzida}"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   FontSize="16"
+                                   LineBreakMode="TailTruncation"
+                                   TextColor="#FFC107"
+                                   FontAttributes="Bold"/>
+
+                            <!--Descrição do Estabelecimento-->
+                            <Label Text="{Binding DescricaoReduzida}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   FontSize="12"
+                                   LineBreakMode="TailTruncation"
+                                   TextColor="White"/>
+
+                            <Grid>
+                              <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                              </Grid.ColumnDefinitions>
+                              <Button Grid.Column="1"
+                                      Text="Detail"
+                                      VerticalOptions="Center"
+                                      BorderRadius="16"
+                                      FontSize="10"
+                                      HeightRequest="34"
+                                      BorderWidth="0"/>
+                            </Grid>
+                          </StackLayout>
+                        </Grid>
+                      </Frame>
+                    </Frame>
+                  </Grid>
+                </ViewCell>
+              </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
+
+          <!--*
+          *
+          * Segunda coluna  do grid principal 
+          *
+          *-->
+          <ListView Grid.Column="2" SeparatorVisibility="None" ItemsSource="{Binding ItemsColumnRight}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <ViewCell>
+                  <Grid>
+                    <!--Colunas do card-->
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame BackgroundColor="#ffffff" OutlineColor="#ffffff" Padding="0,5,0,5">
+                      <Frame Padding="1" BackgroundColor="#E53935" HasShadow="True" OutlineColor="#bbb">
+                        <Grid>
+                          <!--Linhas do card-->
+                          <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="*"/>
+                          </Grid.RowDefinitions>
+
+                          <Frame BackgroundColor="White" Padding="5" HasShadow="False">
+                            <!--Logo da empresa-->
+                            <Controls:CircleImage WidthRequest ="80"
+                                                  HeightRequest="80"
+                                                  Aspect="AspectFit"
+                                                  HorizontalOptions="LayoutOptions.Center"
+                                                  VerticalOptions="LayoutOptions.Center"
+                                                  Source="{Binding Imagem}" />
+                          </Frame>
+                          <StackLayout Grid.Row="1" Padding="5,0,5,5" Spacing="1">
+                            <!--Nome do Estabelecimento-->
+                            <Label Text="{Binding DescricaoReduzida}"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   FontSize="16"
+                                   LineBreakMode="TailTruncation"
+                                   TextColor="#FFC107"
+                                   FontAttributes="Bold"/>
+
+                            <!--Descrição do Estabelecimento-->
+                            <Label Text="{Binding DescricaoReduzida}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   FontSize="12"
+                                   LineBreakMode="TailTruncation"
+                                   TextColor="White"/>
+
+                            <Grid>
+                              <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                              </Grid.ColumnDefinitions>
+                              <Button Grid.Column="1"
+                                      Text="Detail"
+                                      VerticalOptions="Center"
+                                      BorderRadius="16"
+                                      FontSize="10"
+                                      HeightRequest="34"
+                                      BorderWidth="0"/>
+                            </Grid>
+                          </StackLayout>
+                        </Grid>
+                      </Frame>
+                    </Frame>
+                  </Grid>
+                </ViewCell>
+              </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
+        </Grid>
+      </Grid>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

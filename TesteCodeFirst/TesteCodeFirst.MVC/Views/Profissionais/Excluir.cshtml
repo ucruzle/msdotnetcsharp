@@ -1,0 +1,25 @@
+﻿@model TesteCodeFirst.Entities.Profissional
+
+<h2>Exclusão de Profissional</h2>
+
+<br />
+<h4>Deseja realmente excluir o Consultor "@Model.NmProfissional"?</h4>
+<br />
+
+<div>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <p>
+                <input type="submit" value="Excluir" class="btn btn-default" />
+            </p>
+            <br />
+            <p>
+                @Html.ActionLink("Voltar para a Consulta", "Index")
+            </p>
+        </div>
+    }
+
+</div>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClubeDoPedido.Mobile.Template.promocao.Promocao"
+             Title="Promoções">
+  <ScrollView>
+    <StackLayout Spacing="10">
+      <ListView x:Name="ListaPromocoes" RowHeight="110" SeparatorVisibility="None" BackgroundColor="#ffffff" ItemSelected="OnListaPromocoesItemSelected">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout>
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                  </Grid.RowDefinitions>
+                  <StackLayout  Orientation="Vertical" Grid.Row="0" Grid.Column="0" Padding="0,10,0,0" Spacing="5">
+                    <!--Banner do Produto-->
+                    <Image WidthRequest ="100"
+                           HeightRequest="100"
+                           Aspect="Fill"
+                           HorizontalOptions="LayoutOptions.Center"
+                           Source="{Binding Imagem}"/>
+
+                  </StackLayout>
+
+                  <StackLayout  Orientation="Vertical" Grid.Row="0" Grid.Column="1" Padding="0,10,0,0" Spacing="5">
+                    <!--Título-->
+                    <Label Text="{Binding NomeEmpresa}"
+                           TextColor="Black"
+                           FontSize="15" />
+
+                    <!--Descrição Promoção-->
+                    <Label Text="{Binding DescricaoPromocao}"
+                           TextColor="Black"
+                           FontSize="12" />
+
+                    <StackLayout Orientation="Horizontal">
+                      <!--Preço-->
+                      <Label Text="{Binding Preco}"
+                             TextColor="Red"
+                             FontSize="15"/>
+
+                    </StackLayout>
+                  </StackLayout>
+                </Grid>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

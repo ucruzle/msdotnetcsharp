@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsOverallRecordProcess" targetNamespace="http://tempuri.org/dsOverallRecordProcess.xsd" xmlns:mstns="http://tempuri.org/dsOverallRecordProcess.xsd" xmlns="http://tempuri.org/dsOverallRecordProcess.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsOverallRecordProcess" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsOverallRecordProcess" msprop:Generator_UserDSName="dsOverallRecordProcess">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblRgTelefone" msprop:Generator_TableClassName="tblRgTelefoneDataTable" msprop:Generator_TableVarName="tabletblRgTelefone" msprop:Generator_RowChangedName="tblRgTelefoneRowChanged" msprop:Generator_TablePropName="tblRgTelefone" msprop:Generator_RowDeletingName="tblRgTelefoneRowDeleting" msprop:Generator_RowChangingName="tblRgTelefoneRowChanging" msprop:Generator_RowEvHandlerName="tblRgTelefoneRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRgTelefoneRowDeleted" msprop:Generator_RowClassName="tblRgTelefoneRow" msprop:Generator_UserTableName="tblRgTelefone" msprop:Generator_RowEvArgName="tblRgTelefoneRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SegTel" msprop:Generator_ColumnVarNameInTable="columnSegTel" msprop:Generator_ColumnPropNameInRow="SegTel" msprop:Generator_ColumnPropNameInTable="SegTelColumn" msprop:Generator_UserColumnName="SegTel" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="CodTipoFone" msprop:Generator_ColumnVarNameInTable="columnCodTipoFone" msprop:Generator_ColumnPropNameInRow="CodTipoFone" msprop:Generator_ColumnPropNameInTable="CodTipoFoneColumn" msprop:Generator_UserColumnName="CodTipoFone" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="DDDFone" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="DDDFone" msprop:Generator_ColumnVarNameInTable="columnDDDFone" msprop:Generator_ColumnPropNameInTable="DDDFoneColumn" msprop:Generator_UserColumnName="DDDFone" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="NumeroFone" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="NumeroFone" msprop:Generator_ColumnVarNameInTable="columnNumeroFone" msprop:Generator_ColumnPropNameInTable="NumeroFoneColumn" msprop:Generator_UserColumnName="NumeroFone" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="Contato" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Contato" msprop:Generator_ColumnVarNameInTable="columnContato" msprop:Generator_ColumnPropNameInTable="ContatoColumn" msprop:Generator_UserColumnName="Contato" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="EMail" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="EMail" msprop:Generator_ColumnVarNameInTable="columnEMail" msprop:Generator_ColumnPropNameInTable="EMailColumn" msprop:Generator_UserColumnName="EMail" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="Principal" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Principal" msprop:Generator_ColumnVarNameInTable="columnPrincipal" msprop:Generator_ColumnPropNameInTable="PrincipalColumn" msprop:Generator_UserColumnName="Principal" type="xs:string" default="" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblRgNatureza" msprop:Generator_TableClassName="tblRgNaturezaDataTable" msprop:Generator_TableVarName="tabletblRgNatureza" msprop:Generator_RowChangedName="tblRgNaturezaRowChanged" msprop:Generator_TablePropName="tblRgNatureza" msprop:Generator_RowDeletingName="tblRgNaturezaRowDeleting" msprop:Generator_RowChangingName="tblRgNaturezaRowChanging" msprop:Generator_RowEvHandlerName="tblRgNaturezaRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRgNaturezaRowDeleted" msprop:Generator_RowClassName="tblRgNaturezaRow" msprop:Generator_UserTableName="tblRgNatureza" msprop:Generator_RowEvArgName="tblRgNaturezaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodNatureza" msprop:Generator_ColumnVarNameInTable="columnCodNatureza" msprop:Generator_ColumnPropNameInRow="CodNatureza" msprop:Generator_ColumnPropNameInTable="CodNaturezaColumn" msprop:Generator_UserColumnName="CodNatureza" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="CodStatusNat" msprop:Generator_ColumnVarNameInTable="columnCodStatusNat" msprop:Generator_ColumnPropNameInRow="CodStatusNat" msprop:Generator_ColumnPropNameInTable="CodStatusNatColumn" msprop:Generator_UserColumnName="CodStatusNat" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="DataHora" msprop:Generator_ColumnVarNameInTable="columnDataHora" msprop:Generator_ColumnPropNameInRow="DataHora" msprop:Generator_ColumnPropNameInTable="DataHoraColumn" msprop:Generator_UserColumnName="DataHora" type="xs:dateTime" default="0001-01-01T00:00:00-02:00" minOccurs="0" />
+              <xs:element name="Usuario" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" type="xs:string" default="" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

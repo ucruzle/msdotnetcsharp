@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <base href="/">
+    <title>Clube do Pedido</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--materialize-->
+    <link href="Pakages/materialize/css/materialize.min.css" rel="stylesheet" />
+
+    <!--font awesome-->
+    <link href="Pakages/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--bootstrap-->
+    <link href="Pakages/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--angular-->
+    <script src="Pakages/angular/angular.min.js"></script>
+    <script src="Pakages/angular/angular-route.min.js"></script>
+    <script src="Pakages/angular/angular-ui-route.js"></script>
+
+    <!--Injeção dependencias-->
+    <link href="../../ClubePedido.css" rel="stylesheet" />
+    <script src="App/app.module.js"></script>
+    <script src="App/app.routes.js"></script>
+    <script src="App/app.config.js"></script>
+
+    <!--administrativo-->
+    <script src="App/configuracao/empresa/configuracaoEmpresa.js"></script>
+
+    <!--ajuda como funciona-->
+    <script src="App/ajuda/ajuda.js"></script>
+    <link href="App/ajuda/ajuda.css" rel="stylesheet" />
+
+    <!--clube do pedido Index-->
+    <script src="ClubePedido.js"></script>
+    <script src="App/menu.config.js"></script>
+
+    <!--chat-->
+    <script src="App/marketing/chat.js"></script>
+
+    <!--criar conta-->
+    <script src="App/parceiro/conta/criarConta.js"></script>
+    <link href="App/parceiro/conta/criarConta.css" rel="stylesheet" />
+    <script src="App/parceiro/parceiro.service.js"></script>
+
+    <!--dashboard-->
+    <script src="App/dashboard/dashboard.js"></script>
+    <link href="App/dashboard/dashboard.css" rel="stylesheet" />
+
+    <!--estabelecimentos-->
+    <script src="App/estabelecimento/estabelecimento.js"></script>
+    <link href="App/estabelecimento/estabelecimento.css" rel="stylesheet" />
+
+    <!--home-->
+    <script src="App/home/home.js"></script>
+    <link href="App/home/home.css" rel="stylesheet" />
+
+    <!--login parceiro-->
+    <script src="App/parceiro/login/loginParceiro.js"></script>
+
+    <!--login usuário-->
+    <script src="App/usuario/loginUsuario.js"></script>
+
+    <!--loja-->
+    <script src="App/marketing/loja.js"></script>
+
+    <!--produto-->
+    <script src="App/cadastro/produtoNovo.js"></script>
+    <script src="App/cadastro/produto.js"></script>
+
+    <!--promoção-->
+    <script src="App/marketing/promocao.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <!--Menu Gerenciador do sistema-->
+        <div class="navbar-fixed">
+            <nav class="brown escondeMenu header-gerenciador" id="menuGerenciador">
+                <div class="nav-wrapper container-box-nav">
+                    <a href="#" class="brand-logo">
+                        <img class="img-format" style="margin-left:20px" alt="Clube do Pedido" src="Images/logoCafe.png" />
+                    </a>
+                    <ul style="margin-left: 150px;" class="left hide-on-med-and-down">
+                        <!--Configurações-->
+                        <li class="dropdown nav-header-menu-item">
+                            <a href="#/home" class="dropdown-toggle nav-header-menu-item-link" data-toggle="dropdown">Configurações</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/configuracaoEmpresa">Configurações da Página</a></li>
+                                <li><a href="#/configuracao">Configurações de E-mail</a></li>
+                            </ul>
+                        </li>
+                        <!--Cadastro-->
+                        <li class="dropdown nav-header-menu-item open">
+                            <a href="#/home" class="dropdown-toggle  nav-header-menu-item-link" data-toggle="dropdown">Cadastros</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/produto">Produto</a></li>
+                            </ul>
+                        </li>
+                        <!--Histórico-->
+                        <li class="dropdown nav-header-menu-item">
+                            <a href="#/home" class="dropdown-toggle nav-header-menu-item-link" data-toggle="dropdown">Histórico Gerais</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/">Extrato da Conta</a></li>
+                                <li><a href="#/">Vendas Aplicativo</a></li>
+                            </ul>
+                        </li>
+                        <!--Marketing-->
+                        <li class="dropdown nav-header-menu-item">
+                            <a href="#/home" class="dropdown-toggle nav-header-menu-item-link" data-toggle="dropdown">Marketing</a>
+                            <ul class="dropdown-menu">
+                                <li ><a href="#/chat">Chat</a></li>
+                                <li><a href="#/loja">Loja</a></li>
+                                <li><a href="#/promocao">Promoções</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--Menu de Navegação-->
+        <nav class="red darken-1 nav-extended navbar-fixed header" id="menuPrincipal">
+            <div class="nav-wrapper container-box-nav">
+                <div class="row margin_bottom_zero">
+                    <div class="col l1">
+                        <a href="#" class="brand-logo">
+                            <img class="img-position" alt="Clube do Pedido" src="Images/logoClubBranca.png" />
+                        </a>
+                    </div>
+                    <div class="col l5">
+                        <div class="row margin_bottom_zero">
+                            <div class="col l11">
+                                <form class="navbar-form navbar-left" style="margin-left: 20px; width: 100%" role="search">
+                                    <div class="navbar-grupo">
+                                        <input type="text" class="form-control" style="width: 100%" placeholder="Busque um produto ou estabelecimento...">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col l1">
+                                <ul>
+                                    <li> <a href="#/home"><span class="amber-text"><i class="fa fa-search"></i></span></a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+                   <div class="col l6 right hide-on-med-and-down">
+                        <ul class="right ">
+                            <li><a href="ClubePedido.html#!/home"><span class="amber-text"><i class="fa fa-home"></i></span>&nbsp;Home </a></li>
+                            <li><a href="ClubePedido.html#!/ajuda"><span class="amber-text"><i class="fa fa-question"></i></span>&nbsp;Como funciona</a></li>
+                            <li><a href="ClubePedido.html#!/loginParceiro"><span class="amber-text"><i class="fa fa-handshake-o"></i></span>&nbsp;Sou um parceiro</a></li>
+                            <li><a href="#/#"><span class="amber-text"><i class="fa fa-comments"></i></span>&nbsp;Fale conosco</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="red darken-2">
+                <div class="nav-content container-box-nav">
+                    <div class="row">
+                        <div class="col s8">
+                            <ul class="left">
+                                <li><a href="#/estabelecimento" class="active">Promoções</a></li>
+                                <li><a href="#/estabelecimento">Dia de Feira</a></li>
+                                <li><a href="#/estabelecimento">Estabelecimentos</a></li>
+                                <li><a href="#/estabelecimento">Mural</a></li>
+                            </ul>
+                        </div>
+                        <div class="col s4">
+                            <ul class="right">
+                                <li> <a href="ClubePedido.html#!/loginUsuario">Ente ou cadastre-se :)</a> </li>
+                                <li>
+                                    <a>
+                                        <img class="img-format-carrinho" src="Images/carrinho.png" />
+                                    </a>
+                                </li>
+                                <li><span class="new badge green" data-badge-caption="itens">4</span>  </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <!--Injeção de Páginas-->
+            <!--<div ui-view></div>-->
+            <div ng-view></div>
+        </div>
+    </main>
+
+    <!--Rodapé da Página-->
+    <footer class="grey darken-1 page-footer footer-border">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                   
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="grey darken-2 footer-copyright">
+            <div class="container">
+                © 2017 Copyright - Todos direitos reservados - Meu Clube Company.
+                <a class="grey-text text-lighten-4 right" href="#!">meuclube.com.br</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Pakages/jquery/jquery-3.2.0.min.js"></script>
+    <script src="Pakages/materialize/js/materialize.min.js"></script>
+    <script src="Pakages/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('modal').modal();
+            $('.tooltipped').tooltip({ delay: 50 });
+        });
+
+        $('li.dropdown').hover(function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+    </script>
+</body>
+</html>
+
+

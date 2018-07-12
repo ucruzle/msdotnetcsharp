@@ -1,0 +1,30 @@
+﻿body {
+}
+
+.azul-escuro{
+    background-color: #001C3A !important;
+}
+
+.azul-escuro-text {
+    color: #001C3A !important;
+}
+
+.rosa{
+    background-color: #E60084 !important; 
+}
+
+.rosa-text{
+    color: #E60084;
+}
+
+.amarelo-escuro{
+    background-color: #FCCE01 !important; 
+}
+
+.branco{
+    background-color: #FFF !important; 
+}
+
+.azul-rodape{
+    color: #001C3A !important;
+}

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CA99FDD-B6DC-4AB8-8CC9-11314AA2B045}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrSkyNet.ModelLayer</RootNamespace>
+    <AssemblyName>BrSkyNet.ModelLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\CtNivelCinco.cs" />
+    <Compile Include="Entities\CtNivelDois.cs" />
+    <Compile Include="Entities\CtNivelQuatro.cs" />
+    <Compile Include="Entities\CtNivelSeis.cs" />
+    <Compile Include="Entities\CtNivelTres.cs" />
+    <Compile Include="Entities\CtNivelUm.cs" />
+    <Compile Include="Entities\CtPlanoContabil.cs" />
+    <Compile Include="Entities\FiNroBanco.cs" />
+    <Compile Include="Entities\FiTipoCtaBanco.cs" />
+    <Compile Include="Entities\GeAplicacao.cs" />
+    <Compile Include="Entities\GeEmpresa.cs" />
+    <Compile Include="Entities\GeEmpresaAplicacao.cs" />
+    <Compile Include="Entities\GeEmpresaConsol.cs" />
+    <Compile Include="Entities\GeGrupo.cs" />
+    <Compile Include="Entities\GeGrupoProcesso.cs" />
+    <Compile Include="Entities\GeMvcWebProcesso.cs" />
+    <Compile Include="Entities\GeParametro.cs" />
+    <Compile Include="Entities\GeProcesso.cs" />
+    <Compile Include="Entities\GeSessaoUsuario.cs" />
+    <Compile Include="Entities\GeTipoProcesso.cs" />
+    <Compile Include="Entities\GeTmpValor.cs" />
+    <Compile Include="Entities\GeTmpValorDet.cs" />
+    <Compile Include="Entities\GeUsuario.cs" />
+    <Compile Include="Entities\GeUsuarioAplicacao.cs" />
+    <Compile Include="Entities\GeUsuarioGrupo.cs" />
+    <Compile Include="Entities\GeUsuarioProcesso.cs" />
+    <Compile Include="Entities\RgEndereco.cs" />
+    <Compile Include="Entities\RgEstado.cs" />
+    <Compile Include="Entities\RgFisicaJuridica.cs" />
+    <Compile Include="Entities\RgMunicipio.cs" />
+    <Compile Include="Entities\RgNatureza.cs" />
+    <Compile Include="Entities\RgParamRegGeral.cs" />
+    <Compile Include="Entities\RgRegGeral.cs" />
+    <Compile Include="Entities\RgRegGeralNatureza.cs" />
+    <Compile Include="Entities\RgRegiao.cs" />
+    <Compile Include="Entities\RgStatus.cs" />
+    <Compile Include="Entities\RgTelefone.cs" />
+    <Compile Include="Entities\RgTipoFone.cs" />
+    <Compile Include="Entities\RgTipoRg.cs" />
+    <Compile Include="Entities\RgTmpAniversariante.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9EBB004-8257-4197-80D9-58B39D8D2D31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrSoftNet.App.UI.Win.Security</RootNamespace>
+    <AssemblyName>BrSoftNet.App.UI.Win.Security</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Bogo-D-Manager-Manager-Suit-Red-Tie.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutenticationSession\AppSession.cs" />
+    <Compile Include="AutenticationSession\CommandInvok.cs" />
+    <Compile Include="AutenticationSession\ICommand.cs" />
+    <Compile Include="AutenticationSession\IWorkSession.cs" />
+    <Compile Include="AutenticationSession\WorkSession.cs" />
+    <Compile Include="AuthenticationForm\CompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationForm\CompanyForm.Designer.cs">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationForm\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationForm\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashForm\frmSplashMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm\frmSplashMain.Designer.cs">
+      <DependentUpon>frmSplashMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="State\AppStateSecurity.cs" />
+    <Compile Include="State\AppStateSession.cs" />
+    <EmbeddedResource Include="AuthenticationForm\CompanyForm.resx">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthenticationForm\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SplashForm\frmSplashMain.resx">
+      <DependentUpon>frmSplashMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DialogUpdateForm\" />
+    <Folder Include="FullScreenSearchForm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrSoftNet.App.Business.Processes.Manager\BrSoftNet.App.Business.Processes.Manager.csproj">
+      <Project>{2a523363-a52e-40e1-a6a1-5008c46f2475}</Project>
+      <Name>BrSoftNet.App.Business.Processes.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.App.Business.Processes.OverallRecord\BrSoftNet.App.Business.Processes.OverallRecord.csproj">
+      <Project>{e0e1ce74-8144-4f47-b1d2-e9ecfe0b28e4}</Project>
+      <Name>BrSoftNet.App.Business.Processes.OverallRecord</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.App.Business.Processes.Security\BrSoftNet.App.Business.Processes.Security.csproj">
+      <Project>{e9802e2f-5c66-4427-aa10-6495d5531fdf}</Project>
+      <Name>BrSoftNet.App.Business.Processes.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.App.UI.Win.Manager\BrSoftNet.App.UI.Win.Manager.csproj">
+      <Project>{398bbb73-9623-4752-92b3-108a16542427}</Project>
+      <Name>BrSoftNet.App.UI.Win.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.App.UI.Win.OverallRecord\BrSoftNet.App.UI.Win.OverallRecord.csproj">
+      <Project>{b4274505-28df-4383-98f0-14376712162f}</Project>
+      <Name>BrSoftNet.App.UI.Win.OverallRecord</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.Data.Access\BrSoftNet.Data.Access.csproj">
+      <Project>{62c1cb8c-54b5-41c0-94c7-f968b90ebb6c}</Project>
+      <Name>BrSoftNet.Data.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.Library\BrSoftNet.Library.csproj">
+      <Project>{ff150cd4-341b-467e-a552-f2f63ed0a247}</Project>
+      <Name>BrSoftNet.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bogo-D-Manager-Manager-Suit-Red-Tie.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

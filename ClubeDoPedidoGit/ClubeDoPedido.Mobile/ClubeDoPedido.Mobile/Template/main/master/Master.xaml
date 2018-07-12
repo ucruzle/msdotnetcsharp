@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ClubeDoPedido.Mobile.Componentes"
+             x:Class="ClubeDoPedido.Mobile.Template.main.master.Master"
+             Title="Master">
+  <ScrollView>
+    <StackLayout Orientation="Vertical">
+      <!--Cabeçalho do Usuário-->
+      <StackLayout Orientation="Horizontal" BackgroundColor="{Binding ColorPrimary}" HeightRequest="80" Padding="20,30,0,10">
+        <!--Imagem Usuário-->
+        <controls:CircleImage WidthRequest ="55"
+                              HeightRequest="55"
+                              Margin="0,0,10,0"
+                              Aspect="AspectFit"
+                              HorizontalOptions="LayoutOptions.Center"
+                              VerticalOptions="LayoutOptions.Center"
+                              Source="usuario.jpg" />
+
+        <StackLayout Orientation="Vertical" Margin="0,15,0,0">
+          <Label Text="Olá, Roberto!"
+           TextColor="White"
+           FontSize="20"
+           VerticalOptions="Center"></Label>
+
+          <Label Text="betinhoorl@meuclube.com"
+              TextColor="White"
+              FontSize="11"
+              VerticalOptions="Center"></Label>
+
+        </StackLayout>
+      </StackLayout>
+
+      <ListView x:Name="NavigationMenu" RowHeight="60" SeparatorVisibility="None" BackgroundColor="#ffffff" ItemSelected="OnMenuItemSelected">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="20">
+
+                <Image Source="{Binding Icon}"
+                       WidthRequest="24"
+                       HeightRequest="24"
+                       VerticalOptions="Center"/>
+
+                <Label Text="{Binding Title}"
+                       TextColor="#9c9c9c"
+                       FontSize="Medium"
+                       VerticalOptions="Center"/>
+
+              </StackLayout>
+
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

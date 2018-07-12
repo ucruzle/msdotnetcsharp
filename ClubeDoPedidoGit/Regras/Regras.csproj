@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07519706-DB55-43D1-B819-FA983ED005EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Regras</RootNamespace>
+    <AssemblyName>Regras</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Geral\TokenRegras.cs" />
+    <Compile Include="Geral\UsuarioRegras.cs" />
+    <Compile Include="Negocio\RegistrarEndereco.cs" />
+    <Compile Include="Negocio\RegistrarParceiro.cs" />
+    <Compile Include="Negocio\RegistrarPlanoContratado.cs" />
+    <Compile Include="Negocio\VincularEndereco.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouleFactory.cs" />
+    <Compile Include="Validacao\ValidarBairro.cs" />
+    <Compile Include="Validacao\ValidarCep.cs" />
+    <Compile Include="Validacao\ValidarCidade.cs" />
+    <Compile Include="Validacao\ValidarComplemento.cs" />
+    <Compile Include="Validacao\ValidarEmail.cs" />
+    <Compile Include="Validacao\ValidarId.cs" />
+    <Compile Include="Validacao\ValidarLogradouro.cs" />
+    <Compile Include="Validacao\ValidarNome.cs" />
+    <Compile Include="Validacao\ValidarNumero.cs" />
+    <Compile Include="Validacao\ValidarSenha.cs" />
+    <Compile Include="Validacao\ValidarSenhaCadastro.cs" />
+    <Compile Include="Validacao\ValidarTelefone.cs" />
+    <Compile Include="Validacao\ValidarToken.cs" />
+    <Compile Include="Validacao\ValidarUF.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comum\Comum.csproj">
+      <Project>{f265c0ab-2cba-4ca7-82a4-fa2ab426625f}</Project>
+      <Name>Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestrutura\Infraestrutura.csproj">
+      <Project>{d6da71c7-80db-452b-a7c2-e72e0227acb5}</Project>
+      <Name>Infraestrutura</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:ClubeDoPedido.Mobile.Componentes"
+             x:Class="ClubeDoPedido.Mobile.Template.usuario.conta.CriarConta">
+  <ScrollView>
+    <StackLayout BackgroundColor="{Binding ColorPrimary}" VerticalOptions="FillAndExpand">
+      <StackLayout BackgroundColor="{Binding ColorPrimary}" HeightRequest="250">
+        <!--Imagem Usuário-->
+        <Controls:CircleImage WidthRequest ="90"
+                              HeightRequest="90"
+                              Margin="20"
+                              Aspect="AspectFit"
+                              HorizontalOptions="LayoutOptions.Center"
+                              VerticalOptions="LayoutOptions.Center"
+                              Source="usuario.jpg" />
+        <!--Rótulo-->
+        <Label Text="Criar Conta"
+               TextColor="White"
+               FontSize="20"
+               HorizontalOptions="Center"/>
+
+        <!--Dica-->
+        <Image Aspect="AspectFit"
+               HorizontalOptions="LayoutOptions.Center"
+               VerticalOptions="LayoutOptions.Center"
+               Source="msgCadastro.png"/>
+
+      </StackLayout>
+      <StackLayout HorizontalOptions="FillAndExpand" Padding="30,2,30,0" Spacing="10">
+        <!--Campo Nome-->
+        <Controls:LineEntry Text="{Binding Nome}"
+                            Placeholder="Nome"
+                            PlaceholderColor="White"
+                            TextColor="White"
+                            HeightRequest="40"/>
+
+        <!--Campo Email-->
+        <Controls:LineEntry Text="{Binding Email}"
+                            Placeholder="E-mail"
+                            PlaceholderColor="White"
+                            TextColor="White"
+                            HeightRequest="40"/>
+
+        <!--Campo Celular-->
+        <Controls:LineEntry Text="{Binding Celular}"
+                            Placeholder="Celular"
+                            PlaceholderColor="White"
+                            TextColor="White"
+                            HeightRequest="40"/>
+
+        <!--Campo Senha-->
+        <Controls:LineEntry Text="{Binding Senha}"
+                            Placeholder="Senha"
+                            PlaceholderColor="White"
+                            TextColor="White"
+                            IsPassword="True"
+                            HeightRequest="40"/>
+
+        <!--Campo Confirmar Senha-->
+        <Controls:LineEntry Text="{Binding ConfirmarSenha}"
+                            Placeholder="Confirmar Senha"
+                            PlaceholderColor="White"
+                            TextColor="White"
+                            IsPassword="True"
+                            HeightRequest="40"/>
+
+      </StackLayout>
+      <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="30,20,30,10" Spacing="5">
+        <!--Botão de Cadastrar-->
+        <Controls:CustomButton x:Name="buttonCadastrar"
+                               Command="{Binding CadastrarCommand}"
+                               Text="Quero me cadastar!"
+                               TextColor="{Binding ColorPrimary}"
+                               BackgroundColor="White"
+                               BorderRadius="5"
+                               BorderWidth="2"
+                               HeightRequest="40"/>
+
+        <!--Botão Termos de Uso-->
+        <Controls:CustomButton x:Name="buttonTermosUso"
+                               Command="{Binding TermosUsoCommand}"
+                               Text="Termos do Aplicativo - Política de Privacidade"
+                               TextColor="White"
+                               FontSize="8"
+                               BorderColor="White"
+                               BorderWidth="2"
+                               BackgroundColor="{Binding ColorPrimary}"/>
+
+      </StackLayout>
+
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

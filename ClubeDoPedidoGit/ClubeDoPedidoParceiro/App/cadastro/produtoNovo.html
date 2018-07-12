@@ -1,0 +1,57 @@
+﻿<div class="container-box-transparent">
+    <!--BreadCrumb-->
+    <ul class="breadcrumbcss">
+        <li><a>Cadastro</a></li>
+        <li><a ui-sref="Produto">Produto</a></li>
+        <li><a href="#">Inclusão de Produto</a></li>
+    </ul>
+
+    <!--Título da Página-->
+    <h3>{{pageTitle}}</h3>
+
+    <div class="well">
+        <div class="row">
+            <!--Descrição reduzida-->
+            <div class="col s4">
+                <label>Produto</label>
+                <input type="text" class="form-control"  placeholder="Produto" maxlength="50" />
+            </div>
+            <!--Preço-->
+            <div class="col s4">
+                <label>Preço</label>
+                <input type="text"  class="form-control" placeholder="Preço" />
+            </div>
+
+            <div class="col s4" >
+                <label style="margin-left: 50px">Status</label>
+                <div style="margin-top:5px; margin-left: 50px">
+                    <input type="checkbox" id="ativar" />
+                    <label for="ativar">Produto Ativo</label>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="row">
+            <!--Descrição detalhada-->
+            <div class="col s12">
+                <label>Detalhes Produto</label>
+                <textarea ng-model="text"  class="form-control" aria-label="text" maxlength="300"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--Upload Imagen-->
+            <div class="col s12">
+                <label>Carregar Imagen do Produto</label>
+                <input type="file" id="files" />
+                <br />
+                <div class="well">
+                    <img id="image" alt="Imagem do produto" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

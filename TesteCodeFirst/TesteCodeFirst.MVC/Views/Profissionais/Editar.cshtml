@@ -1,0 +1,113 @@
+﻿@model TesteCodeFirst.Entities.Profissional
+
+<h2>Cadastro de Profissionais</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Profissional</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CPF, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.CPF,
+                  new { @class = "campoCPF" })
+                @Html.ValidationMessageFor(model => model.CPF)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NmProfissional, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.NmProfissional,
+                  new
+                  {
+                      @maxlength = 50,
+                      @class = "campoNmProfissional"
+                  })
+                @Html.ValidationMessageFor(model => model.NmProfissional)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CdOcupacao, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.CdOcupacao,
+                  new SelectList(ViewBag.Ocupacoes,
+                      "Id", "NomeOcupacao", Model.CdOcupacao),
+                  new
+                  {
+                      @maxlength = 50,
+                      @class = "campoCdOcupacao"
+                  })
+                @Html.ValidationMessageFor(model => model.CdOcupacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Email,
+                  new
+                  {
+                      @maxlength = 50,
+                      @class = "campoEmail"
+                  })
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Telefone, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Telefone,
+                  new { @class = "campoTelefone" })
+                @Html.ValidationMessageFor(model => model.Telefone)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VlHora, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.VlHora,
+                  new { @class = "campoVlHora campoValorMonetario" })
+                @Html.ValidationMessageFor(model => model.VlHora, "O Valor Hora deve estar entre 10,00 e 9999,99.")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DsObservacao, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DsObservacao,
+                  new
+                  {
+                      @maxlength = 50,
+                      @class = "campoDsObservacao"
+                  })
+                @Html.ValidationMessageFor(model => model.DsObservacao)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar para a Consulta", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/autoNumeric")
+    @Scripts.Render("~/bundles/maskedinput")
+    @Scripts.Render("~/bundles/validations_pt-br")
+}

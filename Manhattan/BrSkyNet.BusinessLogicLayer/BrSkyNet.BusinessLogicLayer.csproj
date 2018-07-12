@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBEFFAC5-CB37-4CF3-8CF4-817AD4213CE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrSkyNet.BusinessLogicLayer</RootNamespace>
+    <AssemblyName>BrSkyNet.BusinessLogicLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\CtNivelCincoBO.cs" />
+    <Compile Include="BusinessObjects\CtNivelDoisBO.cs" />
+    <Compile Include="BusinessObjects\CtNivelQuatroBO.cs" />
+    <Compile Include="BusinessObjects\CtNivelSeisBO.cs" />
+    <Compile Include="BusinessObjects\CtNivelTresBO.cs" />
+    <Compile Include="BusinessObjects\CtNivelUmBO.cs" />
+    <Compile Include="BusinessObjects\CtPlanoContabilBO.cs" />
+    <Compile Include="BusinessObjects\FiNroBancoBO.cs" />
+    <Compile Include="BusinessObjects\FiTipoCtaBancoBO.cs" />
+    <Compile Include="BusinessObjects\GeAplicacaoBO.cs" />
+    <Compile Include="BusinessObjects\GeEmpresaAplicacaoBO.cs" />
+    <Compile Include="BusinessObjects\GeEmpresaBO.cs" />
+    <Compile Include="BusinessObjects\GeEmpresaConsolBO.cs" />
+    <Compile Include="BusinessObjects\GeGrupoBO.cs" />
+    <Compile Include="BusinessObjects\GeGrupoProcessoBO.cs" />
+    <Compile Include="BusinessObjects\GeMvcWebProcessoBO.cs" />
+    <Compile Include="BusinessObjects\GeParametroBO.cs" />
+    <Compile Include="BusinessObjects\GeProcessoBO.cs" />
+    <Compile Include="BusinessObjects\GeSessaoUsuarioBO.cs" />
+    <Compile Include="BusinessObjects\GeTipoProcessoBO.cs" />
+    <Compile Include="BusinessObjects\GeTmpValorBO.cs" />
+    <Compile Include="BusinessObjects\GeTmpValorDetBO.cs" />
+    <Compile Include="BusinessObjects\GeUsuarioAplicacaoBO.cs" />
+    <Compile Include="BusinessObjects\GeUsuarioBO.cs" />
+    <Compile Include="BusinessObjects\GeUsuarioGrupoBO.cs" />
+    <Compile Include="BusinessObjects\GeUsuarioProcessoBO.cs" />
+    <Compile Include="BusinessObjects\RgEnderecoBO.cs" />
+    <Compile Include="BusinessObjects\RgEstadoBO.cs" />
+    <Compile Include="BusinessObjects\RgFisicaJuridicaBO.cs" />
+    <Compile Include="BusinessObjects\RgMunicipioBO.cs" />
+    <Compile Include="BusinessObjects\RgNaturezaBO.cs" />
+    <Compile Include="BusinessObjects\RgParamRegGeralBO.cs" />
+    <Compile Include="BusinessObjects\RgRegGeralBO.cs" />
+    <Compile Include="BusinessObjects\RgRegGeralNaturezaBO.cs" />
+    <Compile Include="BusinessObjects\RgRegiaoBO.cs" />
+    <Compile Include="BusinessObjects\RgStatusBO.cs" />
+    <Compile Include="BusinessObjects\RgTelefoneBO.cs" />
+    <Compile Include="BusinessObjects\RgTipoFoneBO.cs" />
+    <Compile Include="BusinessObjects\RgTipoRgBO.cs" />
+    <Compile Include="BusinessObjects\RgTmpAniversarianteBO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BrSkyNet.DataAccessLayer\BrSkyNet.DataAccessLayer.csproj">
+      <Project>{0357ceb7-293a-4603-acb4-b09700a705b4}</Project>
+      <Name>BrSkyNet.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSkyNet.ModelLayer\BrSkyNet.ModelLayer.csproj">
+      <Project>{1ca99fdd-b6dc-4ab8-8cc9-11314aa2b045}</Project>
+      <Name>BrSkyNet.ModelLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSkyNet.ObjectRelationalMapping\BrSkyNet.ObjectRelationalMapping.csproj">
+      <Project>{ba460ac0-25e1-4ff6-8a80-0ac3c25dbee8}</Project>
+      <Name>BrSkyNet.ObjectRelationalMapping</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

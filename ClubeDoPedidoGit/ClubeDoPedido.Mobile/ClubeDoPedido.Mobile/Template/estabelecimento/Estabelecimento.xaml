@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:ClubeDoPedido.Mobile.Componentes"
+             x:Class="ClubeDoPedido.Mobile.Template.estabelecimento.Estabelecimento"
+             Title="{Binding NomeFantasia}">
+
+
+  <StackLayout x:name="StackPrincipal" Orientation="Vertical" Spacing="0" BackgroundColor="#bdbdbd">
+    <StackLayout x:Name="StackMenu" Orientation="Vertical" Spacing="0" Padding="5" BackgroundColor="{Binding PrimaryColor}">
+      <Grid RowSpacing="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="30"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <!--Voltar-->
+        <Controls:CustomButton x:Name="buttonVoltar"
+                               Image="favoltar.png"
+                               BackgroundColor="{Binding Tema}"
+                               Grid.Row="0"
+                               Grid.Column="0"/>
+        <!--Nome Empresa-->
+        <Label Text="{Binding NomeFantasia}"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontSize="16"
+               VerticalTextAlignment="Center"
+               Grid.Row="0"
+               Grid.Column="1"/>
+      </Grid>
+    </StackLayout>
+
+    <StackLayout x:Name="StackSubMenu" Orientation="Vertical" Spacing="0" BackgroundColor="#FFFFFF">
+      <Grid RowSpacing="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <!--Cardápio - Catálogo-->
+        <Controls:CustomButton x:Name="buttonCatalogo"
+                               Command="{Binding CatalogoCommand}"
+                               Image="{Binding IconeCatalogo}"
+                               FontSize="9"
+                               Text="Catálogo"
+                               TextColor="{Binding PrimaryColor}"
+                               BackgroundColor="White"
+                               Grid.Row="0"
+                               Grid.Column="0"/>
+        <!--Bate papo - Chat-->
+        <Controls:CustomButton x:Name="buttonChat"
+                               Image="{Binding IconeChat}"
+                               FontSize="9"
+                               Text="Bate Papo"
+                               TextColor="{Binding PrimaryColor}"
+                               BackgroundColor="White"
+                               Grid.Row="0"
+                               Grid.Column="1"/>
+        <!--Carrinho de compras  - Pedido-->
+        <Controls:CustomButton x:Name="buttonCart"
+                               Image="{Binding IconeCart}"
+                               FontSize="9"
+                               Text="Pedido"
+                               TextColor="{Binding PrimaryColor}"
+                               BackgroundColor="White"
+                               Grid.Row="0"
+                               Grid.Column="2"/>
+
+      </Grid>
+    </StackLayout>
+
+    <ScrollView>
+      <StackLayout Spacing="0" >
+        <!--Baner Principal-->
+        <Image Source="{Binding BannerUrl}"
+               Aspect="AspectFill"
+               HeightRequest="200"/>
+
+        <StackLayout Orientation="Vertical" BackgroundColor="#FFFFFF" Spacing="0" >
+          <Grid RowSpacing="0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="110" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Vertical" BackgroundColor="#FFFFFF" Grid.Row="0" Grid.Column="0" Padding="0,3,0,0" Spacing="0">
+              <!--Logo Empresa-->
+              <Controls:CircleImage WidthRequest ="70"
+                                    HeightRequest="70"
+                                    Margin="2" Aspect="AspectFit"
+                                    HorizontalOptions="LayoutOptions.Center"
+                                    VerticalOptions="LayoutOptions.Center"
+                                    Source="{Binding ImageUrl}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" Spacing="0" >
+              <!--Nome Empresa-->
+              <Label Text="{Binding NomeFantasia}"
+                     TextColor="{Binding PrimaryColor}"
+                     FontAttributes="Bold"
+                     FontSize="16" />
+
+              <!--Ramo de Atividade-->
+              <Label Text="{Binding RamoAtividade}"
+                     TextColor="#9E9E9E"
+                     FontSize="12" />
+
+              <!--Endereço-->
+              <Label Text="{Binding Endereco}"
+                     TextColor="#9E9E9E"
+                     FontSize="12"/>
+
+            </StackLayout>
+          </Grid>
+        </StackLayout>
+
+        <!--Linha - Separador-->
+        <StackLayout Spacing="0">
+          <BoxView HeightRequest="1" BackgroundColor="#bdbdbd"  HorizontalOptions="FillAndExpand"  />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="#FFFFFF" Spacing="0">
+          <!--Seguir-->
+          <Button x:Name="buttonSeguir"
+                 Command="{Binding SeguirCommand}"
+                 Image="{Binding IconeSeguir}"
+                 TextColor="#9E9E9E"
+                 Text="{Binding TextoButtonSeguir}"
+                 FontAttributes="Bold"
+                 FontSize="10"
+                 BackgroundColor="{Binding LightColor}"/>
+          <!--Compartilhar-->
+          <Button x:Name="buttonCompartilhar"
+                Command="{Binding SeguirCommand}"
+                Image="facompartilhar18.png"
+                TextColor="#9E9E9E"
+                Text="Compartilhar"
+                FontAttributes="Bold"
+                FontSize="10"
+                BackgroundColor="{Binding LightColor}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" BackgroundColor="#FFFFFF" Spacing="0" >
+          <!--Avaliação-->
+          <Label Text="Avaliar Estabelecimento"
+                 TextColor="{Binding PrimaryColor}"
+                 FontAttributes="Italic"
+                 FontFamily="Roboto-Medium"
+                 FontSize="12"
+                 Margin="4,0,0,0"/>
+
+          <StackLayout Orientation="Horizontal">
+            <!--Estrelas de avaliação-->
+            <Image Source="faStarVazia.png"/>
+            <Image Source="faStarVazia.png"/>
+            <Image Source="faStarVazia.png"/>
+            <Image Source="faStarVazia.png"/>
+            <Image Source="faStarVazia.png"/>
+
+            <Label Text=" - Deixe sua Avaliação"
+               TextColor="#bdbdbd"
+               FontAttributes="Italic"
+               FontFamily="Roboto-Medium"
+               VerticalTextAlignment="Center"
+               FontSize="9" />
+
+          </StackLayout>
+
+        </StackLayout>
+
+        <!--Linha - Separador-->
+        <StackLayout Spacing="1">
+          <BoxView HeightRequest="20" BackgroundColor="#bdbdbd"  HorizontalOptions="FillAndExpand"  />
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="Fill" HorizontalOptions="StartAndExpand" BackgroundColor="#FFFFFF">
+          <!--Lista de Promoções-->
+          <ListView x:Name="ListaPromocao"
+                    ItemsSource="{Binding Promocoes}"
+                    SelectedItem="{Binding PromocaoItem, Mode=TwoWay}"
+                    SeparatorVisibility="None"
+                    CachingStrategy="RecycleElement"
+                    BackgroundColor="#FFFFFF"
+                    VerticalOptions="FillAndExpand"
+                    RowHeight="320">
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <ViewCell>
+                  <StackLayout Orientation="Vertical">
+                    <!--Detalhe Promoção-->
+                    <Label Text="{Binding DescricaoReduzida}"
+                           TextColor="{Binding PrimaryColor}"
+                           FontAttributes="Bold"
+                           FontSize="15"
+                           Margin="10,0,10,0"/>
+
+                    <!--Imagem Promoção-->
+                    <Image Aspect="AspectFill"
+                           Source="{Binding Image}"
+                           HeightRequest="180"
+                           Margin="10,0,10,0"/>
+
+                    <!--Informativo-->
+                    <Label Text="{Binding DescricaoDetalhada}"
+                           TextColor="#bdbdbd"
+                           FontAttributes="Bold"
+                           FontSize="15"
+                           Margin="10,0,10,0"/>
+
+                    <StackLayout Orientation="Horizontal">
+                      <!--Comprar Agora-->
+                      <Button x:Name="buttonComprar"
+                            Command="{Binding SeguirCommand}"
+                            TextColor="#616161"
+                            Text="Comprar"
+                            FontSize="13"
+                            Padding="2"
+                            BackgroundColor="#ffffff"/>
+                      
+                    </StackLayout>
+                    <!--Linha - Separador-->
+                    <StackLayout Spacing="1">
+                      <BoxView HeightRequest="20" BackgroundColor="#bdbdbd"  HorizontalOptions="FillAndExpand"  />
+                    </StackLayout>
+                    
+                    </StackLayout>
+                </ViewCell>
+              </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</ContentPage>

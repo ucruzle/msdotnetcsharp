@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{398BBB73-9623-4752-92B3-108A16542427}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrSoftNet.App.UI.Win.Manager</RootNamespace>
+    <AssemblyName>BrSoftNet.App.UI.Win.Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataMaintenance\GrupoProcessoProcessMapping.cs" />
+    <Compile Include="DataMaintenance\LiberacaoUsuarioProcessMapping.cs" />
+    <Compile Include="DataMaintenance\ManagerServiceHelper.cs" />
+    <Compile Include="DataMaintenance\MappingFactory.cs" />
+    <Compile Include="DialogUpdateForm\UpdateFormAplicacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormAplicacao.Designer.cs">
+      <DependentUpon>UpdateFormAplicacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormEmpresa.Designer.cs">
+      <DependentUpon>UpdateFormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormEmpresaAplicacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormEmpresaAplicacao.Designer.cs">
+      <DependentUpon>UpdateFormEmpresaAplicacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormEmpresaConsolidada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormEmpresaConsolidada.Designer.cs">
+      <DependentUpon>UpdateFormEmpresaConsolidada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormGrupo.Designer.cs">
+      <DependentUpon>UpdateFormGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormGrupoProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormGrupoProcesso.Designer.cs">
+      <DependentUpon>UpdateFormGrupoProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormLiberacaoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormLiberacaoUsuario.Designer.cs">
+      <DependentUpon>UpdateFormLiberacaoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormParametroGerenciador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormParametroGerenciador.Designer.cs">
+      <DependentUpon>UpdateFormParametroGerenciador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormProcesso.Designer.cs">
+      <DependentUpon>UpdateFormProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormTipoProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormTipoProcesso.Designer.cs">
+      <DependentUpon>UpdateFormTipoProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormUsuario.Designer.cs">
+      <DependentUpon>UpdateFormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormUsuarioGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormUsuarioGrupo.Designer.cs">
+      <DependentUpon>UpdateFormUsuarioGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormAplicacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormAplicacao.Designer.cs">
+      <DependentUpon>FilterSearchFormAplicacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormEmpresa.Designer.cs">
+      <DependentUpon>FilterSearchFormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormEmpresaAplicacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormEmpresaAplicacao.Designer.cs">
+      <DependentUpon>FilterSearchFormEmpresaAplicacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormEmpresaConsolidada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormEmpresaConsolidada.Designer.cs">
+      <DependentUpon>FilterSearchFormEmpresaConsolidada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormGrupo.Designer.cs">
+      <DependentUpon>FilterSearchFormGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormGrupoProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormGrupoProcesso.Designer.cs">
+      <DependentUpon>FilterSearchFormGrupoProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormLiberacaoUsuarioProcessos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormLiberacaoUsuarioProcessos.Designer.cs">
+      <DependentUpon>FilterSearchFormLiberacaoUsuarioProcessos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormParametroGerenciador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormParametroGerenciador.Designer.cs">
+      <DependentUpon>FilterSearchFormParametroGerenciador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormProcesso.Designer.cs">
+      <DependentUpon>FilterSearchFormProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormTipoProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormTipoProcesso.Designer.cs">
+      <DependentUpon>FilterSearchFormTipoProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormUsuario.Designer.cs">
+      <DependentUpon>FilterSearchFormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormUsuarioGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormUsuarioGrupo.Designer.cs">
+      <DependentUpon>FilterSearchFormUsuarioGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormAplicacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormAplicacao.Designer.cs">
+      <DependentUpon>SearchFormAplicacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormEmpresa.Designer.cs">
+      <DependentUpon>SearchFormEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormEmpresaAplicacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormEmpresaAplicacao.Designer.cs">
+      <DependentUpon>SearchFormEmpresaAplicacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormEmpresaConsolidada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormEmpresaConsolidada.Designer.cs">
+      <DependentUpon>SearchFormEmpresaConsolidada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormGrupo.Designer.cs">
+      <DependentUpon>SearchFormGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormGrupoProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormGrupoProcesso.Designer.cs">
+      <DependentUpon>SearchFormGrupoProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormLiberacaoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormLiberacaoUsuario.Designer.cs">
+      <DependentUpon>SearchFormLiberacaoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormParametroGerenciador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormParametroGerenciador.Designer.cs">
+      <DependentUpon>SearchFormParametroGerenciador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormProcesso.Designer.cs">
+      <DependentUpon>SearchFormProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormTipoProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormTipoProcesso.Designer.cs">
+      <DependentUpon>SearchFormTipoProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormUsuario.Designer.cs">
+      <DependentUpon>SearchFormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormUsuarioGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormUsuarioGrupo.Designer.cs">
+      <DependentUpon>SearchFormUsuarioGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\AppStateManager.cs" />
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormAplicacao.resx">
+      <DependentUpon>UpdateFormAplicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormEmpresa.resx">
+      <DependentUpon>UpdateFormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormEmpresaAplicacao.resx">
+      <DependentUpon>UpdateFormEmpresaAplicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormEmpresaConsolidada.resx">
+      <DependentUpon>UpdateFormEmpresaConsolidada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormGrupo.resx">
+      <DependentUpon>UpdateFormGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormGrupoProcesso.resx">
+      <DependentUpon>UpdateFormGrupoProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormLiberacaoUsuario.resx">
+      <DependentUpon>UpdateFormLiberacaoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormParametroGerenciador.resx">
+      <DependentUpon>UpdateFormParametroGerenciador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormProcesso.resx">
+      <DependentUpon>UpdateFormProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormTipoProcesso.resx">
+      <DependentUpon>UpdateFormTipoProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormUsuario.resx">
+      <DependentUpon>UpdateFormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormUsuarioGrupo.resx">
+      <DependentUpon>UpdateFormUsuarioGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormAplicacao.resx">
+      <DependentUpon>FilterSearchFormAplicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormEmpresa.resx">
+      <DependentUpon>FilterSearchFormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormEmpresaAplicacao.resx">
+      <DependentUpon>FilterSearchFormEmpresaAplicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormEmpresaConsolidada.resx">
+      <DependentUpon>FilterSearchFormEmpresaConsolidada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormGrupo.resx">
+      <DependentUpon>FilterSearchFormGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormGrupoProcesso.resx">
+      <DependentUpon>FilterSearchFormGrupoProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormLiberacaoUsuarioProcessos.resx">
+      <DependentUpon>FilterSearchFormLiberacaoUsuarioProcessos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormParametroGerenciador.resx">
+      <DependentUpon>FilterSearchFormParametroGerenciador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormProcesso.resx">
+      <DependentUpon>FilterSearchFormProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormTipoProcesso.resx">
+      <DependentUpon>FilterSearchFormTipoProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormUsuario.resx">
+      <DependentUpon>FilterSearchFormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormUsuarioGrupo.resx">
+      <DependentUpon>FilterSearchFormUsuarioGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormAplicacao.resx">
+      <DependentUpon>SearchFormAplicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormEmpresa.resx">
+      <DependentUpon>SearchFormEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormEmpresaAplicacao.resx">
+      <DependentUpon>SearchFormEmpresaAplicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormEmpresaConsolidada.resx">
+      <DependentUpon>SearchFormEmpresaConsolidada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormGrupo.resx">
+      <DependentUpon>SearchFormGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormGrupoProcesso.resx">
+      <DependentUpon>SearchFormGrupoProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormLiberacaoUsuario.resx">
+      <DependentUpon>SearchFormLiberacaoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormParametroGerenciador.resx">
+      <DependentUpon>SearchFormParametroGerenciador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormProcesso.resx">
+      <DependentUpon>SearchFormProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormTipoProcesso.resx">
+      <DependentUpon>SearchFormTipoProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormUsuario.resx">
+      <DependentUpon>SearchFormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormUsuarioGrupo.resx">
+      <DependentUpon>SearchFormUsuarioGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrSoftNet.App.Business.Processes.Manager\BrSoftNet.App.Business.Processes.Manager.csproj">
+      <Project>{2a523363-a52e-40e1-a6a1-5008c46f2475}</Project>
+      <Name>BrSoftNet.App.Business.Processes.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.Data.Access\BrSoftNet.Data.Access.csproj">
+      <Project>{62c1cb8c-54b5-41c0-94c7-f968b90ebb6c}</Project>
+      <Name>BrSoftNet.Data.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.Library\BrSoftNet.Library.csproj">
+      <Project>{ff150cd4-341b-467e-a552-f2f63ed0a247}</Project>
+      <Name>BrSoftNet.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.Log\BrSoftNet.Log.csproj">
+      <Project>{077d31b9-f327-4b64-8547-90536747530e}</Project>
+      <Name>BrSoftNet.Log</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+Logo Empresa
+Diretório PGM  Relatório
+Diretório Relatório
+Diretório Servidor
+Diretório Script
+Diretório Importação
+Diretório Exportação Excel
+Diretório Foto
+Tipo Processo Especial
+Tipos Processo Internet
+Mostra Opção Menu

@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4274505-28DF-4383-98F0-14376712162F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrSoftNet.App.UI.Win.OverallRecord</RootNamespace>
+    <AssemblyName>BrSoftNet.App.UI.Win.OverallRecord</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataMaintenance\MappingFactory.cs" />
+    <Compile Include="DataMaintenance\OverallRecordServiceHelper.cs" />
+    <Compile Include="DataMaintenance\RegistroGeralProcessMapping.cs" />
+    <Compile Include="DataTransferProcess\dsOverallRecordProcess.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOverallRecordProcess.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormEstado.Designer.cs">
+      <DependentUpon>UpdateFormEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormMunicipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormMunicipio.Designer.cs">
+      <DependentUpon>UpdateFormMunicipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormNatureza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormNatureza.Designer.cs">
+      <DependentUpon>UpdateFormNatureza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormParamRegGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormParamRegGeral.Designer.cs">
+      <DependentUpon>UpdateFormParamRegGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegiao.Designer.cs">
+      <DependentUpon>UpdateFormRegiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeral.Designer.cs">
+      <DependentUpon>UpdateFormRegistroGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralContato.Designer.cs">
+      <DependentUpon>HelperFormRegistroGeralContato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralContatoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralContatoView.Designer.cs">
+      <DependentUpon>HelperFormRegistroGeralContatoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralNatureza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralNatureza.Designer.cs">
+      <DependentUpon>HelperFormRegistroGeralNatureza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralNaturezaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralNaturezaView.Designer.cs">
+      <DependentUpon>HelperFormRegistroGeralNaturezaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormStatus.Designer.cs">
+      <DependentUpon>UpdateFormStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormTipoFone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormTipoFone.Designer.cs">
+      <DependentUpon>UpdateFormTipoFone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormTipoRg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogUpdateForm\UpdateFormTipoRg.Designer.cs">
+      <DependentUpon>UpdateFormTipoRg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormEstado.Designer.cs">
+      <DependentUpon>FilterSearchFormEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormMunicipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormMunicipio.Designer.cs">
+      <DependentUpon>FilterSearchFormMunicipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormNatureza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormNatureza.Designer.cs">
+      <DependentUpon>FilterSearchFormNatureza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormParamRegGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormParamRegGeral.Designer.cs">
+      <DependentUpon>FilterSearchFormParamRegGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormRegiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormRegiao.Designer.cs">
+      <DependentUpon>FilterSearchFormRegiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormRegistroGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormRegistroGeral.Designer.cs">
+      <DependentUpon>FilterSearchFormRegistroGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormStatus.Designer.cs">
+      <DependentUpon>FilterSearchFormStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormTipoFone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormTipoFone.Designer.cs">
+      <DependentUpon>FilterSearchFormTipoFone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormTipoRg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterFullScreenSearchForm\FilterSearchFormTipoRg.Designer.cs">
+      <DependentUpon>FilterSearchFormTipoRg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormEstado.Designer.cs">
+      <DependentUpon>SearchFormEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormMunicipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormMunicipio.Designer.cs">
+      <DependentUpon>SearchFormMunicipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormNatureza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormNatureza.Designer.cs">
+      <DependentUpon>SearchFormNatureza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormParamRegGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormParamRegGeral.Designer.cs">
+      <DependentUpon>SearchFormParamRegGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormRegiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormRegiao.Designer.cs">
+      <DependentUpon>SearchFormRegiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormRegistroGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormRegistroGeral.Designer.cs">
+      <DependentUpon>SearchFormRegistroGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormStatus.Designer.cs">
+      <DependentUpon>SearchFormStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormTipoFone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormTipoFone.Designer.cs">
+      <DependentUpon>SearchFormTipoFone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormTipoRg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreenSearchForm\SearchFormTipoRg.Designer.cs">
+      <DependentUpon>SearchFormTipoRg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\AppStateOverallRecord.cs" />
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormEstado.resx">
+      <DependentUpon>UpdateFormEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormMunicipio.resx">
+      <DependentUpon>UpdateFormMunicipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormNatureza.resx">
+      <DependentUpon>UpdateFormNatureza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormParamRegGeral.resx">
+      <DependentUpon>UpdateFormParamRegGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormRegiao.resx">
+      <DependentUpon>UpdateFormRegiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormRegistroGeral.resx">
+      <DependentUpon>UpdateFormRegistroGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralContato.resx">
+      <DependentUpon>HelperFormRegistroGeralContato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralContatoView.resx">
+      <DependentUpon>HelperFormRegistroGeralContatoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralNatureza.resx">
+      <DependentUpon>HelperFormRegistroGeralNatureza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormRegistroGeralHelperScreen\HelperFormRegistroGeralNaturezaView.resx">
+      <DependentUpon>HelperFormRegistroGeralNaturezaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormStatus.resx">
+      <DependentUpon>UpdateFormStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormTipoFone.resx">
+      <DependentUpon>UpdateFormTipoFone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogUpdateForm\UpdateFormTipoRg.resx">
+      <DependentUpon>UpdateFormTipoRg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormEstado.resx">
+      <DependentUpon>FilterSearchFormEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormMunicipio.resx">
+      <DependentUpon>FilterSearchFormMunicipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormNatureza.resx">
+      <DependentUpon>FilterSearchFormNatureza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormParamRegGeral.resx">
+      <DependentUpon>FilterSearchFormParamRegGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormRegiao.resx">
+      <DependentUpon>FilterSearchFormRegiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormRegistroGeral.resx">
+      <DependentUpon>FilterSearchFormRegistroGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormStatus.resx">
+      <DependentUpon>FilterSearchFormStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormTipoFone.resx">
+      <DependentUpon>FilterSearchFormTipoFone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterFullScreenSearchForm\FilterSearchFormTipoRg.resx">
+      <DependentUpon>FilterSearchFormTipoRg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormEstado.resx">
+      <DependentUpon>SearchFormEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormMunicipio.resx">
+      <DependentUpon>SearchFormMunicipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormNatureza.resx">
+      <DependentUpon>SearchFormNatureza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormParamRegGeral.resx">
+      <DependentUpon>SearchFormParamRegGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormRegiao.resx">
+      <DependentUpon>SearchFormRegiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormRegistroGeral.resx">
+      <DependentUpon>SearchFormRegistroGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormStatus.resx">
+      <DependentUpon>SearchFormStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormTipoFone.resx">
+      <DependentUpon>SearchFormTipoFone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreenSearchForm\SearchFormTipoRg.resx">
+      <DependentUpon>SearchFormTipoRg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DataTransferProcess\dsOverallRecordProcess.xsc">
+      <DependentUpon>dsOverallRecordProcess.xsd</DependentUpon>
+    </None>
+    <None Include="DataTransferProcess\dsOverallRecordProcess.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOverallRecordProcess.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataTransferProcess\dsOverallRecordProcess.xss">
+      <DependentUpon>dsOverallRecordProcess.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrSoftNet.App.Business.Processes.OverallRecord\BrSoftNet.App.Business.Processes.OverallRecord.csproj">
+      <Project>{e0e1ce74-8144-4f47-b1d2-e9ecfe0b28e4}</Project>
+      <Name>BrSoftNet.App.Business.Processes.OverallRecord</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.Data.Access\BrSoftNet.Data.Access.csproj">
+      <Project>{62c1cb8c-54b5-41c0-94c7-f968b90ebb6c}</Project>
+      <Name>BrSoftNet.Data.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.Library\BrSoftNet.Library.csproj">
+      <Project>{ff150cd4-341b-467e-a552-f2f63ed0a247}</Project>
+      <Name>BrSoftNet.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BrSoftNet.Log\BrSoftNet.Log.csproj">
+      <Project>{077d31b9-f327-4b64-8547-90536747530e}</Project>
+      <Name>BrSoftNet.Log</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

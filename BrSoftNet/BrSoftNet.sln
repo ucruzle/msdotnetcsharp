@@ -1,0 +1,144 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-) Infrastructure", "00-) Infrastructure", "{13AFBF5E-4BCD-4232-A4B6-669302DB0784}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-) DataTier", "01-) DataTier", "{1AB9982D-52C2-47DD-92C8-39213753538D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-) BusinessTier", "02-) BusinessTier", "{A871A51F-E0E1-477B-8D8A-7485D27860E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-) PresentationTier", "03-) PresentationTier", "{5A1B4A0F-0961-4AC0-95CD-27F50AD2959C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-) ChangeHistory", "04-) ChangeHistory", "{3612E16B-028B-42E5-BA0E-FEF4D2350DC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.Library", "BrSoftNet.Library\BrSoftNet.Library.csproj", "{FF150CD4-341B-467E-A552-F2F63ED0A247}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.Data.Access", "BrSoftNet.Data.Access\BrSoftNet.Data.Access.csproj", "{62C1CB8C-54B5-41C0-94C7-F968B90EBB6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.App.Business.Processes.Security", "BrSoftNet.App.Business.Processes.Security\BrSoftNet.App.Business.Processes.Security.csproj", "{E9802E2F-5C66-4427-AA10-6495D5531FDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.App.Business.Processes.OverallRecord", "BrSoftNet.App.Business.Processes.OverallRecord\BrSoftNet.App.Business.Processes.OverallRecord.csproj", "{E0E1CE74-8144-4F47-B1D2-E9ECFE0B28E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.App.Business.Processes.Manager", "BrSoftNet.App.Business.Processes.Manager\BrSoftNet.App.Business.Processes.Manager.csproj", "{2A523363-A52E-40E1-A6A1-5008C46F2475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.App.UI.Win.Security", "BrSoftNet.App.UI.Win.Security\BrSoftNet.App.UI.Win.Security.csproj", "{D9EBB004-8257-4197-80D9-58B39D8D2D31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.App.UI.Win.OverallRecord", "BrSoftNet.App.UI.Win.OverallRecord\BrSoftNet.App.UI.Win.OverallRecord.csproj", "{B4274505-28DF-4383-98F0-14376712162F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.App.UI.Win.Manager", "BrSoftNet.App.UI.Win.Manager\BrSoftNet.App.UI.Win.Manager.csproj", "{398BBB73-9623-4752-92B3-108A16542427}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.Log", "BrSoftNet.Log\BrSoftNet.Log.csproj", "{077D31B9-F327-4B64-8547-90536747530E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrSoftNet.Log.App.UI.Win.MonitorChanges", "BrSoftNet.Log.App.UI.Win.MonitorChanges\BrSoftNet.Log.App.UI.Win.MonitorChanges.csproj", "{DC8E2304-CB33-4CEA-8A18-F7B1BA38D243}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://neodare.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = BrSoftNet.Library\\BrSoftNet.Library.csproj
+		SccProjectTopLevelParentUniqueName0 = BrSoftNet.Dev.sln
+		SccProjectName0 = BrSoftNet.Library
+		SccLocalPath0 = BrSoftNet.Library
+		SccProjectUniqueName1 = BrSoftNet.Data.Access\\BrSoftNet.Data.Access.csproj
+		SccProjectTopLevelParentUniqueName1 = BrSoftNet.Dev.sln
+		SccProjectName1 = BrSoftNet.Data.Access
+		SccLocalPath1 = BrSoftNet.Data.Access
+		SccProjectUniqueName2 = BrSoftNet.App.Business.Processes.Security\\BrSoftNet.App.Business.Processes.Security.csproj
+		SccProjectTopLevelParentUniqueName2 = BrSoftNet.Dev.sln
+		SccProjectName2 = BrSoftNet.App.Business.Processes.Security
+		SccLocalPath2 = BrSoftNet.App.Business.Processes.Security
+		SccProjectUniqueName3 = BrSoftNet.App.Business.Processes.OverallRecord\\BrSoftNet.App.Business.Processes.OverallRecord.csproj
+		SccProjectTopLevelParentUniqueName3 = BrSoftNet.Dev.sln
+		SccProjectName3 = BrSoftNet.App.Business.Processes.OverallRecord
+		SccLocalPath3 = BrSoftNet.App.Business.Processes.OverallRecord
+		SccProjectUniqueName4 = BrSoftNet.App.Business.Processes.Manager\\BrSoftNet.App.Business.Processes.Manager.csproj
+		SccProjectTopLevelParentUniqueName4 = BrSoftNet.Dev.sln
+		SccProjectName4 = BrSoftNet.App.Business.Processes.Manager
+		SccLocalPath4 = BrSoftNet.App.Business.Processes.Manager
+		SccProjectUniqueName5 = BrSoftNet.App.UI.Win.Security\\BrSoftNet.App.UI.Win.Security.csproj
+		SccProjectTopLevelParentUniqueName5 = BrSoftNet.Dev.sln
+		SccProjectName5 = BrSoftNet.App.UI.Win.Security
+		SccLocalPath5 = BrSoftNet.App.UI.Win.Security
+		SccProjectUniqueName6 = BrSoftNet.App.UI.Win.OverallRecord\\BrSoftNet.App.UI.Win.OverallRecord.csproj
+		SccProjectTopLevelParentUniqueName6 = BrSoftNet.Dev.sln
+		SccProjectName6 = BrSoftNet.App.UI.Win.OverallRecord
+		SccLocalPath6 = BrSoftNet.App.UI.Win.OverallRecord
+		SccProjectUniqueName7 = BrSoftNet.App.UI.Win.Manager\\BrSoftNet.App.UI.Win.Manager.csproj
+		SccProjectTopLevelParentUniqueName7 = BrSoftNet.Dev.sln
+		SccProjectName7 = BrSoftNet.App.UI.Win.Manager
+		SccLocalPath7 = BrSoftNet.App.UI.Win.Manager
+		SccProjectUniqueName8 = BrSoftNet.Log\\BrSoftNet.Log.csproj
+		SccProjectTopLevelParentUniqueName8 = BrSoftNet.Dev.sln
+		SccProjectName8 = BrSoftNet.Log
+		SccLocalPath8 = BrSoftNet.Log
+		SccProjectUniqueName9 = BrSoftNet.Log.App.UI.Win.MonitorChanges\\BrSoftNet.Log.App.UI.Win.MonitorChanges.csproj
+		SccProjectTopLevelParentUniqueName9 = BrSoftNet.Dev.sln
+		SccProjectName9 = BrSoftNet.Log.App.UI.Win.MonitorChanges
+		SccLocalPath9 = BrSoftNet.Log.App.UI.Win.MonitorChanges
+		SccLocalPath10 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF150CD4-341B-467E-A552-F2F63ED0A247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF150CD4-341B-467E-A552-F2F63ED0A247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF150CD4-341B-467E-A552-F2F63ED0A247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF150CD4-341B-467E-A552-F2F63ED0A247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C1CB8C-54B5-41C0-94C7-F968B90EBB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C1CB8C-54B5-41C0-94C7-F968B90EBB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C1CB8C-54B5-41C0-94C7-F968B90EBB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C1CB8C-54B5-41C0-94C7-F968B90EBB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9802E2F-5C66-4427-AA10-6495D5531FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9802E2F-5C66-4427-AA10-6495D5531FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9802E2F-5C66-4427-AA10-6495D5531FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9802E2F-5C66-4427-AA10-6495D5531FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E1CE74-8144-4F47-B1D2-E9ECFE0B28E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0E1CE74-8144-4F47-B1D2-E9ECFE0B28E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0E1CE74-8144-4F47-B1D2-E9ECFE0B28E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0E1CE74-8144-4F47-B1D2-E9ECFE0B28E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A523363-A52E-40E1-A6A1-5008C46F2475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A523363-A52E-40E1-A6A1-5008C46F2475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A523363-A52E-40E1-A6A1-5008C46F2475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A523363-A52E-40E1-A6A1-5008C46F2475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9EBB004-8257-4197-80D9-58B39D8D2D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9EBB004-8257-4197-80D9-58B39D8D2D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9EBB004-8257-4197-80D9-58B39D8D2D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9EBB004-8257-4197-80D9-58B39D8D2D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4274505-28DF-4383-98F0-14376712162F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4274505-28DF-4383-98F0-14376712162F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4274505-28DF-4383-98F0-14376712162F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4274505-28DF-4383-98F0-14376712162F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398BBB73-9623-4752-92B3-108A16542427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398BBB73-9623-4752-92B3-108A16542427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398BBB73-9623-4752-92B3-108A16542427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398BBB73-9623-4752-92B3-108A16542427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077D31B9-F327-4B64-8547-90536747530E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077D31B9-F327-4B64-8547-90536747530E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077D31B9-F327-4B64-8547-90536747530E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077D31B9-F327-4B64-8547-90536747530E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8E2304-CB33-4CEA-8A18-F7B1BA38D243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8E2304-CB33-4CEA-8A18-F7B1BA38D243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8E2304-CB33-4CEA-8A18-F7B1BA38D243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8E2304-CB33-4CEA-8A18-F7B1BA38D243}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF150CD4-341B-467E-A552-F2F63ED0A247} = {13AFBF5E-4BCD-4232-A4B6-669302DB0784}
+		{62C1CB8C-54B5-41C0-94C7-F968B90EBB6C} = {1AB9982D-52C2-47DD-92C8-39213753538D}
+		{E9802E2F-5C66-4427-AA10-6495D5531FDF} = {A871A51F-E0E1-477B-8D8A-7485D27860E4}
+		{E0E1CE74-8144-4F47-B1D2-E9ECFE0B28E4} = {A871A51F-E0E1-477B-8D8A-7485D27860E4}
+		{2A523363-A52E-40E1-A6A1-5008C46F2475} = {A871A51F-E0E1-477B-8D8A-7485D27860E4}
+		{D9EBB004-8257-4197-80D9-58B39D8D2D31} = {5A1B4A0F-0961-4AC0-95CD-27F50AD2959C}
+		{B4274505-28DF-4383-98F0-14376712162F} = {5A1B4A0F-0961-4AC0-95CD-27F50AD2959C}
+		{398BBB73-9623-4752-92B3-108A16542427} = {5A1B4A0F-0961-4AC0-95CD-27F50AD2959C}
+		{077D31B9-F327-4B64-8547-90536747530E} = {3612E16B-028B-42E5-BA0E-FEF4D2350DC1}
+		{DC8E2304-CB33-4CEA-8A18-F7B1BA38D243} = {3612E16B-028B-42E5-BA0E-FEF4D2350DC1}
+	EndGlobalSection
+EndGlobal

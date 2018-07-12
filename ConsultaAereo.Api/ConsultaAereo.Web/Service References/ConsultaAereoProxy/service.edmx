@@ -1,0 +1,45 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="ConsultaAereo.Api.Models" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="PassagemAerea">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DataIda" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="DataVolta" Type="Edm.DateTime" />
+        <Property Name="QuantidadePax" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="Origem" Relationship="ConsultaAereo.Api.Models.ConsultaAereo_Api_Models_PassagemAerea_Origem_ConsultaAereo_Api_Models_Aeroporto_OrigemPartner" ToRole="Origem" FromRole="OrigemPartner" />
+        <NavigationProperty Name="Destino" Relationship="ConsultaAereo.Api.Models.ConsultaAereo_Api_Models_PassagemAerea_Destino_ConsultaAereo_Api_Models_Aeroporto_DestinoPartner" ToRole="Destino" FromRole="DestinoPartner" />
+      </EntityType>
+      <EntityType Name="Aeroporto">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Sigla" Type="Edm.String" />
+        <Property Name="NomeCompleto" Type="Edm.String" />
+      </EntityType>
+      <Association Name="ConsultaAereo_Api_Models_PassagemAerea_Origem_ConsultaAereo_Api_Models_Aeroporto_OrigemPartner">
+        <End Type="ConsultaAereo.Api.Models.Aeroporto" Role="Origem" Multiplicity="0..1" />
+        <End Type="ConsultaAereo.Api.Models.PassagemAerea" Role="OrigemPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="ConsultaAereo_Api_Models_PassagemAerea_Destino_ConsultaAereo_Api_Models_Aeroporto_DestinoPartner">
+        <End Type="ConsultaAereo.Api.Models.Aeroporto" Role="Destino" Multiplicity="0..1" />
+        <End Type="ConsultaAereo.Api.Models.PassagemAerea" Role="DestinoPartner" Multiplicity="0..1" />
+      </Association>
+      <EntityContainer Name="Container" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="PassagemAerea" EntityType="ConsultaAereo.Api.Models.PassagemAerea" />
+        <EntitySet Name="Aeroporto" EntityType="ConsultaAereo.Api.Models.Aeroporto" />
+        <AssociationSet Name="ConsultaAereo_Api_Models_PassagemAerea_Origem_ConsultaAereo_Api_Models_Aeroporto_OrigemPartnerSet" Association="ConsultaAereo.Api.Models.ConsultaAereo_Api_Models_PassagemAerea_Origem_ConsultaAereo_Api_Models_Aeroporto_OrigemPartner">
+          <End Role="OrigemPartner" EntitySet="PassagemAerea" />
+          <End Role="Origem" EntitySet="Aeroporto" />
+        </AssociationSet>
+        <AssociationSet Name="ConsultaAereo_Api_Models_PassagemAerea_Destino_ConsultaAereo_Api_Models_Aeroporto_DestinoPartnerSet" Association="ConsultaAereo.Api.Models.ConsultaAereo_Api_Models_PassagemAerea_Destino_ConsultaAereo_Api_Models_Aeroporto_DestinoPartner">
+          <End Role="DestinoPartner" EntitySet="PassagemAerea" />
+          <End Role="Destino" EntitySet="Aeroporto" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

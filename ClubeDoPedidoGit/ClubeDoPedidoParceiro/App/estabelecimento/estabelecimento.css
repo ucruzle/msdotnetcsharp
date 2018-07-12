@@ -1,0 +1,21 @@
+﻿/*.container-filter {
+    min-height: 200px;
+    height: 50px;
+    background-color: #f6f6f6;
+    padding:5% 7%;
+}*/
+
+.container-filter {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #f6f6f6;
+    min-height: 80px;
+    overflow: hidden;
+    padding: 7px 5%;
+    margin-bottom: 36px;
+    position: relative;
+}

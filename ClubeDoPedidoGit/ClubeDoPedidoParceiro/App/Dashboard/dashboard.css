@@ -1,0 +1,14 @@
+﻿.p-format {
+    color: white;
+    font-size: 13px;
+    height: 90px;
+    line-height: 90px;
+    display: block;
+    margin-top: 15px;
+}
+
+.img-format {
+    height: 45px;
+    width: 45px;
+    margin-top: 1px;
+}
